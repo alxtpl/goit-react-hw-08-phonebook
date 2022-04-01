@@ -37,7 +37,6 @@ export default function App() {
     <>
       <Container>
         <AppBar />
-        export default App;
         <Suspense
           fallback={
             <BallTriangle

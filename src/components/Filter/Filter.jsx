@@ -17,7 +17,6 @@ export default function Filter() {
     <Form.Group size="sm" className="mb-3">
       <Form.Control
         placeholder="Find contacts by name"
-        className={''}
         type="text"
         value={value}
         onChange={onChange}

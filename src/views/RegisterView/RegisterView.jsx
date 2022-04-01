@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import Form from 'react-bootstrap/Form';
+import { Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { register } from 'redux/auth/authOperations';
 
 export default function RegisterView() {
@@ -44,11 +45,11 @@ export default function RegisterView() {
   };
 
   return (
-    <div className={''}>
-      <div className={''}>
-        <h2 className={''}>Sign up</h2>
+    <div>
+      <div>
+        <h2>Sign up</h2>
 
-        <form onSubmit={handleSubmit} className={''} autoComplete="off">
+        <form onSubmit={handleSubmit} autoComplete="off">
           <Form.Group size="sm" className="mb-3">
             {' '}
             <Form.Control

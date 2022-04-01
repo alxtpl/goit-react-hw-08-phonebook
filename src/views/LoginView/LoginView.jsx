@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import Form from 'react-bootstrap/Form';
 import { logIn } from 'redux/auth/authOperations';
+import { Button, Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function LoginView() {
   const [email, setMail] = useState('');
@@ -38,15 +39,11 @@ export default function LoginView() {
   };
 
   return (
-    <div className={''}>
-      <div className={''}>
-        <h2 className={''}>Login</h2>
+    <div>
+      <div>
+        <h2>Login</h2>
 
-        <form
-          onSubmit={handleSubmit}
-          className={''}
-          autoComplete="off"
-        >
+        <form onSubmit={handleSubmit} autoComplete="off">
           <Form.Group size="sm" className="mb-3">
             {' '}
             <Form.Control
@@ -69,7 +66,9 @@ export default function LoginView() {
             />
           </Form.Group>
 
-          <button type="submit">Log in</button>
+          <Button variant="dark" type="submit">
+            Log in
+          </Button>
         </form>
       </div>
     </div>

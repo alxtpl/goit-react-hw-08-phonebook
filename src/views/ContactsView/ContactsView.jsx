@@ -15,13 +15,13 @@ export default function ContactsView() {
   useEffect(() => dispatch(fetchContacts()), [dispatch]);
 
   return (
-    <div className={''}>
-      <div className={''}>
-        <h2 className={''}>Phonebook</h2>
+    <div>
+      <div>
+        <h2>Phonebook</h2>
         <ContactForm />
       </div>
-      <div className={''}>
-        <h2 className={''}>Contacts</h2>
+      <div>
+        <h2>Contacts</h2>
         <Filter />
         {isLoading && (
           <BallTriangle type="Grid" color="grey" height={100} width={100} />

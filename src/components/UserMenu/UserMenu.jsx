@@ -2,6 +2,8 @@ import { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/authOperations';
 import { getUserName } from '../../redux/auth/authSelectors';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -12,9 +14,9 @@ export default function UserMenu() {
   return (
     <div /*style={''}*/>
       <span /*style={''}*/>Welcome, {userName}</span>
-      <button type="button" className={''} onClick={onLogout}>
-        Out
-      </button>
+      <Button variant="danger" type="button" onClick={onLogout}>
+        Exit
+      </Button>
     </div>
   );
 }

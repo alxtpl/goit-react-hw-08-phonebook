@@ -8,21 +8,11 @@ export default function Navigation() {
 
   return (
     <Nav defaultActiveKey="/">
-      <NavLink
-        to="/"
-        exact
-        className={''}
-        activeClassName={''}
-      >
+      <NavLink to="/" exact active>
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink
-          to="/contacts"
-          exact
-          className={''}
-          activeClassName={''}
-        >
+        <NavLink to="/contacts" exact active>
           Phonebook
         </NavLink>
       )}

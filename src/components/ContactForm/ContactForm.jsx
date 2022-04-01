@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Form from 'react-bootstrap/Form';
+import { Button, Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import phonebookSelectors from 'redux/contacts/contactsSelectors';
 import { addContact } from 'redux/contacts/contactsOperations';
 
@@ -47,11 +48,10 @@ export default function ContactForm() {
   );
 
   return (
-    <form onSubmit={handleSubmit} className={''}>
+    <form onSubmit={handleSubmit}>
       <Form.Group size="sm" className="mb-3">
         <Form.Control
           type="text"
-          className={''}
           value={name}
           onChange={handleChange}
           placeholder="Enter name"
@@ -63,7 +63,6 @@ export default function ContactForm() {
       </Form.Group>
       <Form.Group size="sm" className="mb-3">
         <Form.Control
-          className={''}
           value={number}
           onChange={handleChange}
           type="tel"
@@ -74,9 +73,9 @@ export default function ContactForm() {
           required
         />
       </Form.Group>
-      <button type="submit" className={''}>
+      <Button variant="success" type="submit">
         Add contact
-      </button>
+      </Button>
     </form>
   );
 }
